@@ -1,0 +1,30 @@
+body{
+	background-color: #000;
+	color:#fdfdfd;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size: 16pt;
+}
+
+#head{
+	font-size: 32pt;
+	padding-left: 1%;
+	padding-bottom: 1%;
+}
+
+#subbody{
+	padding-bottom: 3%;
+}
+
+#canvasdiv{
+	text-align: left;
+}
+
+#subheading{
+	font-weight: bold;
+}
+
+#controls{
+	font-weight: normal;
+	padding-left: 1%;
+}
