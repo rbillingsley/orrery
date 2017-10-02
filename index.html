@@ -1,72 +1,89 @@
-<!doctype html>
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>
-			Orrery
-		</title>
-
-		<link rel="icon" type="image/png" href="favicon.png">
-		<link rel=StyleSheet href="main.css" type="text/css" media=screen>
-		<script type="text/javascript" src="javascript/canvas.js"></script>
-		<script type="text/javascript" src="javascript/planet.js"></script>
-		<script type="text/javascript" src="javascript/moon.js"></script>
-		<script type="text/javascript" src="javascript/vector.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" href="https://www.rbill.co.uk/assets/main.css">
+	<title>Orrery - Russell Billingsley</title>
 	</head>
-	<body class="body" id="maincont">
-		<div>
-			<a id="head" href="http://www.rbill.co.uk">Russell Billingsley</a>
+	<body>
+	<header class="site-header" role="banner">
+		<div class="wrapper">
+			<a class="site-title" href="https://www.rbill.co.uk/">Russell Billingsley</a>
 		</div>
-		<div id="title">
-			Orrery
+	</header>
+	<main class="page-content" aria-label="Content">
+	<div class="wrapper">
+	<article class="post">
+	<header class="post-header">
+		<h1 class="post-title">The Orrery</h1>
+	</header>
+	<div class="post-content">
+		<div class="orrery-body">
+			<p> This is a project from 2012 placed here for archival and portfolio purposes. It has only been updated to the style of the main website for cohesion. </p>
+			<div class="orrery-subbody">
+				<div class= "orrery-canvas">
+					<canvas id="canvas" width="600" height="600" style="position: relative; left: 50%; margin-left: -300px">
+						Your browser does not support the canvas tag
+					</canvas>
+				</div>
+				<div class= "orrery-controls">
+					<h3>Camera</h3>
+					m = Draw mode select p = Pause/Resume <br>
+					f = increase speed r = decrease speed <br>
+					i = zoom in o = zoom out <br>
+					k = select orbit mode<br>
+
+					<h3>Customisation</h3>
+					a = increase line points s = decrease line points <br>
+					g = toggle show orbit path  q = toggle show current settings <br>
+					w = toggle background redraw <br>
+
+					<h3>Draw Mode</h3>
+					You can switch between 4 different draw modes by pressing the "m" key on the keyboard. <br>
+					You can choose from the Arc draw mode, the Line draw mode (which you can also increment using the "a" key and decrement using the "s" key.),
+					the Sprite draw mode, and the Sprite + Spritesheet mode which adds spritesheet animation to Earth and Mars. <br>
+					
+					<h3>Orbit Mode</h3>
+					You can switch between two orbit modes, Circular and Elliptical by pressing the "k" key. <br>
+					
+					<h3>Pausing</h3>
+					You can pause the Orrery by pressing the "p" key.
+					
+					<h3>Changing Speed</h3>
+					You can change the speed of the planet orbits. <br>
+					To speed up press the "f" key. To slow down press the "r" key <br>
+					
+					<h3>Zooming</h3>
+					You can change the zoom level of the window. <br>
+					To zoom in press the "i" key.To zoom out press the "o" key. <br>
+					
+					<h3>Orbit Path</h3>
+					It's possible to toggle the Orbit path line on and off, to do this press the "g" <br>
+					
+					<h3>Current Settings</h3>
+					It's also possible to toggle on and off the Current Settings text, to do this press the "q" key. <br>
+					
+					<h3>Toggling the Background</h3>
+					You can also toggle on and off the Background redrawing which can result in some interesting visuals. <br> 
+					To do this press the "w" key. <br>
+				</div>
+			</div>
 		</div>
-		<div id="subtitle"> This is a project from 2012 placed here for archival and portfolio purposes, enjoy. </div>
-		<div id="subbody">
-			<div id= "canvasdiv">
-				<canvas id="canvas" width="600" height="600">
-					Your browser does not support the canvas tag
-				</canvas>
-			</div>
-			<div id= "controls">
-				<p id= "subheading">Controls</p>
-				m = Draw mode select p = Pause/Resume <br>
-				f = increase speed r = decrease speed <br>
-				i = zoom in o = zoom out <br>
-				k = select orbit mode<br>
-				<p id= "subheading">Additional Controls</p>
-				a = increase line points s = decrease line points <br>
-				g = toggle show orbit path  q = toggle show current settings <br>
-				w = toggle background redraw <br>
-			</div>
-			<div id= "controls">
-				<p id= "subheading">Draw Mode</p>
-				You can switch between 4 different draw modes by pressing the "m" key on the keyboard. <br>
-				You can choose from the Arc draw mode, the Line draw mode (which you can also increment using the "a" key and decrement using the "s" key.),
-				the Sprite draw mode, and the Sprite + Spritesheet mode which adds spritesheet animation to Earth and Mars. <br>
-				
-				<p id= "subheading">Orbit Mode</p>
-				You can switch between two orbit modes, Circular and Elliptical by pressing the "k" key. <br>
-				
-				<p id= "subheading">Pausing</p>
-				You can pause the Orrery by pressing the "p" key.
-				
-				<p id= "subheading">Changing Speed</p>
-				You can change the speed of the planet orbits. <br>
-				To speed up press the "f" key. To slow down press the "r" key <br>
-				
-				<p id= "subheading">Zooming</p>
-				You can change the zoom level of the window. <br>
-				To zoom in press the "i" key.To zoom out press the "o" key. <br>
-				
-				<p id= "subheading">Orbit Path</p>
-				It's possible to toggle the Orbit path line on and off, to do this press the "g" <br>
-				
-				<p id= "subheading">Current Settings</p>
-				It's also possible to toggle on and off the Current Settings text, to do this press the "q" key. <br>
-				
-				<p id= "subheading">Toggling the Background</p>
-				You can also toggle on and off the Background redrawing which can result in some interesting visuals. <br> 
-				To do this press the "w" key. <br>
-			</div>
+	</div>
+	<script type="text/javascript" src="javascript/canvas.js"></script>
+	<script type="text/javascript" src="javascript/planet.js"></script>
+	<script type="text/javascript" src="javascript/moon.js"></script>
+	<script type="text/javascript" src="javascript/vector.js"></script>
+	</article>
+	</div>
+	</main>
+	<footer class="site-footer">
+		<div class="wrapper">
+			<h2 class="footer-heading"></h2>
 		</div>
+	</footer>
 	</body>
 </html>
